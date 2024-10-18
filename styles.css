@@ -47,3 +47,7 @@ button {
     font-size: 30px;
 }
 
+.buttonSelect {
+    background-color: black;
+    color: white;
+}
