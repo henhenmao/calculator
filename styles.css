@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#display {
+    margin-top: 50px;
+    font-size: 20px;
+    width: 450px;
+    height: 20px;
+    text-align: center;
+}
+
+.numpad {
+    margin-top: 30px;
+    display: flex;  
+    width: 450px;
+    height: 450px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+}
+
+
+.numpad button {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+}
+
+
+.operators {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.operators button {
+    width: 100px;
+    height: 100px;
+}
+
+button {
+    font-size: 30px;
+}
+
