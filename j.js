@@ -1,5 +1,6 @@
 let n1 = "";
 let n2 = "";
+let target = 0;
 let pressedOperation = false; // indicates beginning of n2
 let operation = "";
 let result;
@@ -14,6 +15,7 @@ const display = document.querySelector("#display");
 const resetButton = document.querySelector("#reset");
 const equalsButton = document.querySelector("#equals");
 const dotButton = document.querySelector("#dot");
+const deleteButton = document.querySelector("#delete")
 
 
 // making the numbers work
@@ -77,6 +79,21 @@ dotButton.addEventListener("click", () => {
     alert("i don't know how to implement decimal numbers");
 });
 
+
+
+// making delet butotn work
+deleteButton.addEventListener("click", () => {
+    if (justEquals) {
+        reset();
+    } else {
+        display.textContent = display.textContent.substring(0, display.textContent.length - 1);
+        if (pressedOperation) {
+            n2 = n2.substring(0, n2.length - 1);
+        } else {
+            n1 = n1.substring(0, n1.length - 1);
+        }
+    }
+});
 
 function equals() {
     if (!n1 || !n2 || !operation) { }
